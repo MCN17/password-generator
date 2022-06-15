@@ -1,5 +1,3 @@
-// Assignment code here
-
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var upperCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var lowerCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -12,12 +10,12 @@ numberOfChar = "";
 function generatePassword () {
   var numberOfChar  = prompt("How many characters do you want in your password?");
 
+  
   if (numberOfChar < 8 || numberOfChar >= 128) {
     prompt("Choose a correct amount of characters!"); 
   } else {
     confirm(`Your password will have ${numberOfChar} characters.`);
   }
-
 
 
   var confirmSpecial = confirm("Do you want your password to have special characters?");
@@ -37,6 +35,21 @@ function generatePassword () {
     confirm("Your password will have lowercase letters in it.")
   }
 
+  if (confirmSpecial) {
+    diffCharacters = diffCharacters.concat(specialChar);
+};
+
+if (confirmLowerCase) {
+   diffCharacters =  diffCharacters.concat(lowerCase);
+};
+
+if (confirmUpperCase) {
+  diffCharacters =  diffCharacters.concat(upperCase);
+};
+
+if (confirmNumbers) {
+  diffCharacters =  diffCharacters.concat(numbers);
+};
 
 }
 
