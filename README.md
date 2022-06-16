@@ -7,3 +7,6 @@ To create a password generator that lets the user choose how many characters the
 * HTML
 * CSS
 * JavaScript
+
+
+![image](https://user-images.githubusercontent.com/104735194/174159816-d385a2d4-d7d0-4e32-a92a-2107103eab99.png)
