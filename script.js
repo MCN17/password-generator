@@ -51,6 +51,14 @@ if (confirmNumbers) {
   diffCharacters =  diffCharacters.concat(numbers);
 };
 
+var userPassword = "";
+for (var i = 0; i < numberOfChar; i++) {
+  var random = [Math.floor(Math.random() * diffCharacters.length)];
+  userPassword = userPassword + diffCharacters[random];
+}
+
+return userPassword;
+
 }
 
   
