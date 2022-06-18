@@ -10,11 +10,11 @@ numberOfChar = "";
 
 // Funtion to generate the password.
 function generatePassword () {
-  var numberOfChar  = prompt("How many characters do you want in your password?");
+  var numberOfChar  = prompt("How many characters do you want in your password? Please choose between 8-128!");
 
   // If statement that promps the user on how many characters they would like their password to have.
   if (numberOfChar < 8 || numberOfChar >= 128) {
-    prompt("Choose a correct amount of characters!"); 
+    return"Choose a correct amount of characters!"; 
   } else {
     confirm(`Your password will have ${numberOfChar} characters.`);
   }
@@ -25,19 +25,35 @@ function generatePassword () {
   var confirmSpecial = confirm("Do you want your password to have special characters?");
   if (confirmSpecial) {
     confirm("Your password will have special characters.")
-  } 
+  } else {
+    confirm("there will be no Special Characters in your password.")
+  }
+
   var confirmNumbers = confirm("Do you want your password to numbers?");
   if (confirmNumbers) {
     confirm("Your password will have numbers in it")
+  } else {
+    confirm("There will be no Numbers in your password.")
   }
+
   var confirmUpperCase = confirm("Do you want uppercase characters in your password?");
   if (confirmUpperCase) {
     confirm("Your password will have uppercase letters in it.")
+  } else {
+    confirm("There will be no Uppercase Characters in your password.")
   }
+
   var confirmLowerCase = confirm("Do you want lowercase characters in your password?");
   if (confirmLowerCase) {
     confirm("Your password will have lowercase letters in it.")
+  } else {
+    confirm("There will be no Lowercase Chracters in your password.")
   }
+
+  if (!confirmSpecial && !confirmNumbers && !confirmUpperCase && !confirmLowerCase) {
+    return "You must Choose at least one!"
+  }
+
 
   // If statements that add the confirmed characters into diffCharacters using the concat() method.
   if (confirmSpecial) {
